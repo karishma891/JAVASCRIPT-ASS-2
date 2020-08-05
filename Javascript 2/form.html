@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Form and Events</title>
+</head>
+<body>
+        <div class="container mt-2">
+                <h1>Registration Form</h1>
+                <form id="registrationForm">
+                  <div class="form-group row">
+                    <div class="col">
+                      <label for="username">Enter your Name :</label><br>
+                       <input type="text" id ="username" name="username" placeholder= "your name..."  class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                        <label for="Password">Enter your password:</label><br>
+                        <input type="Password" id ="Password" name="username" placeholder="your password..." class="form-control"  required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                        <label for="Password">Confirm password:</label><br>
+                        <input type="Password" id ="Confirm Password" name="username" placeholder="your password..." class="form-control"  required>   
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary btn-block" id="btnSubmit" value="Submit" onclick="return Validate()" ondblclick="myalert()">Register</button> 
+                       
+                        <script> 
+                            function myalert() { 
+                                alert(" Registeration successful!"); 
+                            } 
+                        </script> 
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <script type="text/javascript" src="./Events.js"></script>
+
+
+               <script type="text/javascript">
+                    function Validate() {
+                     var password = document.getElementById("Password").value;
+                     var confirmPassword = document.getElementById("Confirm Password").value;
+                      if (password != confirmPassword) {
+                      alert("Passwords do not match.");
+                       return false;
+                      }
+                    return true;
+        }
+    </script>
+    <script>
+        function Submit() {
+          alert ("Successful");
+        }
+        </script>
+
+    
+
+</body>
+</html>
